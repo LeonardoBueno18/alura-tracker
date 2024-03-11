@@ -1,8 +1,11 @@
 <template>
     <BoxTracker>
         <div class="columns">
-            <div class="column is-7">
+            <div class="column is-4">
                 {{ tarefa.descricao || 'Tarefa sem Descrição' }}
+            </div>
+            <div class="column is-3">
+                {{ tarefa.projeto?.nome || 'Projeto não informado' }}
             </div>
             <div class="column">
                 <CronometroTracker :tempoEmSegundos="tarefa.duracaoEmSegundos" />
